@@ -4,7 +4,6 @@
   "description": "A parser for Google Maps data",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc --watch",
     "prepublishOnly": "npm run build",
     "build": "tsc"
