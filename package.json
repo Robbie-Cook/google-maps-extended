@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "build": "tsc"
+    "build": "tsc && md-magic"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,12 @@
   },
   "homepage": "https://github.com/Robbie-Cook/google-maps-extended#readme",
   "dependencies": {
-    "chokidar-cli": "^2.1.0"
+    "chokidar-cli": "^2.1.0",
+    "tsdoc": "0.0.4",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "markdown-magic": "^1.0.0",
+    "tsdoc-extended": "^1.0.3"
   }
 }

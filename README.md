@@ -21,9 +21,20 @@ npm install
 
 ## Usage
 
-```sh
-npm run start
+```typescript
+import GoogleMapsExtended from "google-maps-extended";
 ```
+
+or 
+
+```typescript
+const GoogleMapsExtended = require("google-maps-extended").default;
+```
+
+## API
+
+<!-- AUTO-GENERATED-CONTENT:START (API) --> 
+<!-- AUTO-GENERATED-CONTENT:END (API) --> 
 
 ## Author
 
