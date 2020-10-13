@@ -10,13 +10,13 @@ type GoogleMapsResponse = Array<ResponseItem> | null;
 
 export default class GoogleMapsExtended {
   /**
-   * Get a vendors country from a Google Maps API code
+   * Get a country from a Google Maps API code
    */
-  static getVendorCountryCode(
-    vendorLocationsData: ResponseItem
+  static getCountryCode(
+    LocationsData: ResponseItem
   ): string | null {
-    if (vendorLocationsData) {
-      for (const address_component of vendorLocationsData?.address_components) {
+    if (LocationsData) {
+      for (const address_component of LocationsData?.address_components) {
         if (address_component?.types?.includes("country")) {
           return address_component.short_name;
         }
@@ -26,11 +26,11 @@ export default class GoogleMapsExtended {
   }
 
   /**
-   * Get a vendors city from a Google Maps API code
+   * Get a city from a Google Maps API code
    */
-  static getVendorCity(vendorLocationsData: ResponseItem): string | null {
-    if (vendorLocationsData) {
-      for (const address_component of vendorLocationsData?.address_components) {
+  static getCity(LocationsData: ResponseItem): string | null {
+    if (LocationsData) {
+      for (const address_component of LocationsData?.address_components) {
         if (address_component?.types?.includes("locality")) {
           return address_component.short_name;
         }
