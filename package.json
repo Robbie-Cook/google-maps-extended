@@ -1,6 +1,6 @@
 {
   "name": "google-maps-extended",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A parser for Google Maps data",
   "main": "dist/index.js",
   "scripts": {
