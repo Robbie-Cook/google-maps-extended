@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "build": "tsc && md-magic"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
