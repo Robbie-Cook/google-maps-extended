@@ -12,9 +12,7 @@ export default class GoogleMapsExtended {
   /**
    * Get a country from a Google Maps API code
    */
-  static getCountryCode(
-    LocationsData: ResponseItem
-  ): string | null {
+  static getCountryCode(LocationsData: ResponseItem): string | null {
     if (LocationsData) {
       for (const address_component of LocationsData?.address_components) {
         if (address_component?.types?.includes("country")) {
@@ -31,7 +29,10 @@ export default class GoogleMapsExtended {
   static getCity(LocationsData: ResponseItem): string | null {
     if (LocationsData) {
       for (const address_component of LocationsData?.address_components) {
-        if (address_component?.types?.includes("locality")) {
+        if (
+          address_component?.types?.includes("locality") ??
+          address_component?.types?.includes("administrative_area_level_1") // Handling for Tokyo
+        ) {
           return address_component.short_name;
         }
       }
