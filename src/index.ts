@@ -30,8 +30,16 @@ export default class GoogleMapsExtended {
     if (LocationsData) {
       for (const address_component of LocationsData?.address_components) {
         if (
-          address_component?.types?.includes("locality") ??
-          address_component?.types?.includes("administrative_area_level_1") // Handling for Tokyo
+          address_component?.types?.includes("locality")
+        ) {
+          return address_component.short_name;
+        }
+      }
+
+      // Handle Tokyo
+      for (const address_component of LocationsData?.address_components) {
+        if (
+          address_component?.types?.includes("administrative_area_level_1")
         ) {
           return address_component.short_name;
         }
